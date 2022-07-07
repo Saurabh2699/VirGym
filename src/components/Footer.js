@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import Logo from "../assets/images/newlogo.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Logo from "../assets/images/newlogo.png";
 
 const Footer = () => (
   <Box mt="80px" bgcolor="#e0f0f0">
@@ -39,9 +39,7 @@ const Footer = () => (
           },
         }}
         fontSize="large"
-        onClick={(event) =>
-          window.open("https://github.com/Saurabh2699/VirGym", "_blank")
-        }
+        onClick={() => window.open("https://github.com/Saurabh2699/VirGym", "_blank")}
       />
       <LinkedInIcon
         sx={{
@@ -51,9 +49,7 @@ const Footer = () => (
           color: "blue",
         }}
         fontSize="large"
-        onClick={(event) =>
-          window.open("https://www.linkedin.com/in/saurabh-khaparey/", "_blank")
-        }
+        onClick={() => window.open("https://www.linkedin.com/in/saurabh-khaparey/", "_blank")}
       />
     </Stack>
   </Box>

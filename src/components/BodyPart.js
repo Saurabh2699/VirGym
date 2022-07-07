@@ -11,22 +11,22 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
     sx={
       bodyPart === item
         ? {
-            borderTop: "4px solid #495afd",
-            background: "#fff",
-            borderBottomLeftRadius: "20px",
-            width: "270px",
-            height: "282px",
-            cursor: "pointer",
-            gap: "47px",
-          }
+          borderTop: "4px solid #495afd",
+          background: "#fff",
+          borderBottomLeftRadius: "20px",
+          width: "270px",
+          height: "282px",
+          cursor: "pointer",
+          gap: "47px",
+        }
         : {
-            background: "#fff",
-            borderBottomLeftRadius: "20px",
-            width: "270px",
-            height: "282px",
-            cursor: "pointer",
-            gap: "47px",
-          }
+          background: "#fff",
+          borderBottomLeftRadius: "20px",
+          width: "270px",
+          height: "282px",
+          cursor: "pointer",
+          gap: "47px",
+        }
     }
     onClick={() => {
       setBodyPart(item);

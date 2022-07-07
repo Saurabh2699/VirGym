@@ -19,30 +19,29 @@ const ExerciseDetail = () => {
 
     const fetchExercisesData = async () => {
       const exerciseDbUrl = "https://exercisedb.p.rapidapi.com";
-      const youtubeSearchUrl =
-        "https://youtube-search-and-download.p.rapidapi.com";
+      const youtubeSearchUrl = "https://youtube-search-and-download.p.rapidapi.com";
 
       const exerciseDetailData = await fetchData(
         `${exerciseDbUrl}/exercises/exercise/${id}`,
-        exerciseOptions
+        exerciseOptions,
       );
       setExerciseDetail(exerciseDetailData);
 
       const exerciseVideosData = await fetchData(
         `${youtubeSearchUrl}/search?query=${exerciseDetailData.name} exercise`,
-        youtubeOptions
+        youtubeOptions,
       );
       setExerciseVideos(exerciseVideosData.contents);
 
       const targetMuscleExercisesData = await fetchData(
         `${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,
-        exerciseOptions
+        exerciseOptions,
       );
       setTargetMuscleExercises(targetMuscleExercisesData);
 
       const equimentExercisesData = await fetchData(
         `${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,
-        exerciseOptions
+        exerciseOptions,
       );
       setEquipmentExercises(equimentExercisesData);
     };
